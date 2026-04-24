@@ -63,13 +63,13 @@ function ComparisonSection({ onStartTrial }) {
 
   const markStyle = (value, onDark) => {
     const base = {
-      width: 26, height: 26, borderRadius: 999,
+      width: 32, height: 32, borderRadius: 999,
       display: 'inline-grid', placeItems: 'center',
       flex: 'none',
     };
     if (value === true) return (
       <span style={{ ...base, background: 'hsl(var(--yk-red))', color: 'white' }}>
-        <Check size={14} stroke={3}/>
+        <Check size={18} stroke={3}/>
       </span>
     );
     if (value === "partial") return (
@@ -78,7 +78,7 @@ function ComparisonSection({ onStartTrial }) {
         background: onDark ? 'hsl(0 0% 100% / .08)' : 'hsl(var(--yk-ink) / .06)',
         color: onDark ? 'hsl(0 0% 100% / .6)' : 'hsl(var(--yk-ink) / .55)',
         border: onDark ? '1px solid hsl(0 0% 100% / .15)' : '1px solid hsl(var(--yk-ink) / .15)',
-        fontSize: 18, fontWeight: 700, lineHeight: 1,
+        fontSize: 20, fontWeight: 700, lineHeight: 1,
       }}>–</span>
     );
     return (
@@ -88,7 +88,7 @@ function ComparisonSection({ onStartTrial }) {
         color: onDark ? 'hsl(0 0% 100% / .45)' : 'hsl(var(--yk-ink) / .4)',
         border: onDark ? '1px solid hsl(0 0% 100% / .12)' : '1px solid hsl(var(--yk-ink) / .12)',
       }}>
-        <X size={12} stroke={2.5}/>
+        <X size={14} stroke={2.5}/>
       </span>
     );
   };
@@ -211,25 +211,19 @@ function ComparisonSection({ onStartTrial }) {
               }}>
                 {col.sub}
               </div>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 14 }}>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
                 {rows.map((row, i) => {
                   const cell = row[col.key];
                   const dark = col.highlight;
                   return (
-                    <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+                    <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                       {markStyle(cell.mark, dark)}
-                      <div style={{ minWidth: 0 }}>
+                      <div style={{ minWidth: 0, flex: 1 }}>
                         <div style={{
                           fontSize: 14, fontWeight: 600, lineHeight: 1.3,
                           color: dark ? 'white' : 'hsl(var(--yk-ink))',
                         }}>
                           {row.criterion}
-                        </div>
-                        <div style={{
-                          fontSize: 13, marginTop: 2,
-                          color: dark ? 'hsl(0 0% 100% / .7)' : 'hsl(var(--yk-ink) / .6)',
-                        }}>
-                          {cell.text}
                         </div>
                       </div>
                     </li>
@@ -248,7 +242,7 @@ function ComparisonSection({ onStartTrial }) {
           }}>
             See the difference on the gym floor. Your teen's first session is on us.
           </p>
-          <button className="btn btn-primary btn-lg" onClick={onStartTrial}>
+          <button className="btn btn-primary btn-lg hide-cta-on-mobile" onClick={onStartTrial}>
             Book Free Session <ArrowRight size={18} className="arrow"/>
           </button>
         </div>
@@ -312,7 +306,7 @@ function ComparisonSection({ onStartTrial }) {
             background: white;
             border: 1px solid hsl(var(--yk-line));
             border-radius: 18px;
-            padding: 28px 24px;
+            padding: 24px 20px;
           }
           .compare-card-yk {
             background: hsl(var(--yk-ink));

@@ -475,3 +475,9 @@ label.field.dark > span { color: hsl(0 0% 100% / .6); }
 [data-accent="blue"] { --yk-accent: var(--yk-blue); }
 [data-accent="flame"] { --yk-accent: var(--yk-flame); }
 [data-accent="green"] { --yk-accent: var(--yk-green); }
+
+/* Mobile: hide redundant CTAs */
+@media (max-width: 768px) {
+  .hide-cta-on-mobile { display: none !important; }
+  .two-col, .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}

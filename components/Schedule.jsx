@@ -108,7 +108,7 @@ function ScheduleSection({ onStartTrial }) {
             <LegendDot color="#7db88f" label="Weekend" />
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <button className="btn btn-primary" onClick={onStartTrial}>
+            <button className="btn btn-primary hide-cta-on-mobile" onClick={onStartTrial}>
               Book Your First Session <ArrowRight size={18} className="arrow"/>
             </button>
           </div>

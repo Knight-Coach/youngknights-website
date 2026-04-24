@@ -140,7 +140,7 @@ function ProgramSection({ onStartTrial }) {
                 </ul>
               </div>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <button className="btn btn-primary" onClick={onStartTrial}>
+                <button className="btn btn-primary hide-cta-on-mobile" onClick={onStartTrial}>
                   Book Free Session <ArrowRight size={18} className="arrow"/>
                 </button>
                 <a href="#schedule" className="btn btn-ghost-dark">View Schedule</a>
@@ -425,7 +425,7 @@ function CtaBand({ onStartTrial, onContact }) {
           No contracts. No pressure. Come meet the team, try a session, see if it's the right fit.
         </p>
         <div style={{ marginTop: 36, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button className="btn btn-primary btn-lg" onClick={onStartTrial}>
+          <button className="btn btn-primary btn-lg hide-cta-on-mobile" onClick={onStartTrial}>
             Book Free Session <ArrowRight size={18} className="arrow"/>
           </button>
         </div>

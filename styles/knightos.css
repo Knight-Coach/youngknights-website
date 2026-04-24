@@ -1,0 +1,207 @@
+/* =========================================================
+   KnightOS Design System — Colors & Type
+   Sourced from: Knight-Coach/knight-schedule-board (src/index.css,
+   tailwind.config.ts). HSL values preserved from tokens.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* --- Core surfaces --- */
+  --background: 220 14% 96%;
+  --foreground: 224 71% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+
+  /* --- Brand --- */
+  --primary: 217 91% 60%;              /* Knight blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 9% 46%;
+
+  /* --- UI neutrals --- */
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 224 71% 4%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 217 91% 60%;
+
+  /* --- Semantic --- */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 160 84% 39%;
+  --success-foreground: 0 0% 100%;
+  --warning: 43 96% 56%;
+  --warning-foreground: 26 83% 14%;
+  --score: 45 93% 47%;                 /* Gamification gold */
+  --score-foreground: 26 83% 14%;
+
+  /* --- Class / program accents (used on SessionCard left borders) --- */
+  --class-mens: 217 91% 60%;
+  --class-womens: 330 81% 60%;
+  --class-bootcamp: 160 84% 39%;
+  --class-young: 43 96% 56%;
+  --class-recovery: 187 92% 69%;
+  --class-sunday: 263 70% 50%;
+
+  /* --- Sidebar --- */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 224 71% 4%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 220 14% 96%;
+  --sidebar-accent-foreground: 224 71% 4%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217 91% 60%;
+
+  /* --- Radii --- */
+  --radius: 0.75rem;       /* 12px — the "lg" default */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.625rem;   /* 10px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px — card-elevated, badges */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* --- Elevation --- */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+
+  /* --- Spacing scale (Tailwind derived, limited to used steps) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* --- Type families --- */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+
+  /* --- Gradients --- */
+  --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
+  --gradient-score: linear-gradient(135deg, hsl(45 93% 47%), hsl(36 100% 50%));
+  --gradient-login-bg: linear-gradient(to bottom right, hsl(210 40% 96%), hsl(210 40% 98%), hsl(214 95% 93%));
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 210 20% 98%;
+  --card: 224 40% 8%;
+  --card-foreground: 210 20% 98%;
+  --popover: 224 40% 8%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 28% 17%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 215 28% 17%;
+  --muted-foreground: 217 10% 64%;
+  --accent: 215 28% 17%;
+  --accent-foreground: 210 20% 98%;
+  --border: 215 28% 17%;
+  --input: 215 28% 17%;
+  --ring: 217 91% 60%;
+  --sidebar-background: 224 40% 8%;
+  --sidebar-foreground: 210 20% 98%;
+  --sidebar-accent: 215 28% 17%;
+  --sidebar-border: 215 28% 17%;
+}
+
+/* ================================
+   Type scale (semantic vars)
+   ================================ */
+:root {
+  --text-xs: 0.75rem;       /* 12 */
+  --text-sm: 0.875rem;      /* 14 */
+  --text-base: 1rem;        /* 16 */
+  --text-lg: 1.125rem;      /* 18 */
+  --text-xl: 1.25rem;       /* 20 */
+  --text-2xl: 1.5rem;       /* 24 */
+  --text-3xl: 1.875rem;     /* 30 */
+  --text-4xl: 2.25rem;      /* 36 */
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+
+  --tracking-tight: -0.01em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.12em;
+}
+
+/* ================================
+   Base element styles
+   ================================ */
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;          /* bold — the in-app "font-display font-bold" pairing */
+  letter-spacing: var(--tracking-tight);
+  color: hsl(var(--foreground));
+}
+h1 { font-size: var(--text-3xl); line-height: var(--leading-tight); }
+h2 { font-size: var(--text-2xl); line-height: var(--leading-tight); }
+h3 { font-size: var(--text-lg);  line-height: var(--leading-snug); }
+
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+p, li { font-size: var(--text-sm); line-height: var(--leading-normal); }
+
+small, .eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}
+
+code, kbd, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875em;
+}
+
+/* ================================
+   Utility primitives mirrored from the app
+   ================================ */
+.card-elevated {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border) / 0.5);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+.card-interactive {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border) / 0.5);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s, border-color .2s;
+}
+.card-interactive:hover {
+  box-shadow: var(--shadow-md);
+  border-color: hsl(var(--primary) / 0.2);
+}
+.gradient-primary { background: var(--gradient-primary); }
+.gradient-score   { background: var(--gradient-score); }

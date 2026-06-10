@@ -23,6 +23,10 @@ function FAQSection({ onStartTrial }) {
       a: "Yes, always. Parents are welcome to stay, watch and ask questions — especially for the first few sessions. A lot of parents love seeing their teen's progress first-hand. After a few weeks most teens are happy being dropped off, but you're never locked out.",
     },
     {
+      q: "How much does it cost?",
+      a: "Pricing depends on the program and how many sessions a week suit your teen, so we'd rather have a quick chat than quote a one-size-fits-all number. Call Zac on 0452 519 877 or book a free session and we'll walk you through the options — no pressure, no obligation. There are no joining fees or hidden extras.",
+    },
+    {
       q: "Do I need to sign a contract?",
       a: "The first 12 weeks are a committed foundation block — that's how long it takes to build real strength, clean up technique and see proper results. After the initial 12 weeks it rolls into month-to-month, so you can pause, stop or adjust at any time. No year-long lock-ins, no trap contracts.",
     },

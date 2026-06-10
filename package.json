@@ -1,0 +1,12 @@
+{
+  "name": "youngknights-website",
+  "private": true,
+  "description": "Young Knights teen strength & conditioning website. Static site — JSX in components/ compiles to js/ via npm run build.",
+  "scripts": {
+    "build:jsx": "node build.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.27.0"
+  }
+}

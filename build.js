@@ -1,7 +1,10 @@
 // Compiles the JSX in components/ into plain JS bundles in js/.
-// Run with: npm install && npm run build
+// Run with: npm install && npm run build:jsx
 // The HTML pages load the bundles from js/ — edit the .jsx sources,
 // rebuild, and commit both.
+// Named build:jsx (not build) on purpose: Vercel auto-runs a script named
+// "build" and then expects a public/ output directory, but this site is
+// served statically from the repo root with the js/ bundles committed.
 
 const babel = require('@babel/core');
 const fs = require('fs');

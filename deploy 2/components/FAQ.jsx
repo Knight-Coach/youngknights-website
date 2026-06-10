@@ -23,10 +23,6 @@ function FAQSection({ onStartTrial }) {
       a: "Yes, always. Parents are welcome to stay, watch and ask questions — especially for the first few sessions. A lot of parents love seeing their teen's progress first-hand. After a few weeks most teens are happy being dropped off, but you're never locked out.",
     },
     {
-      q: "How much does it cost?",
-      a: "$67/week for up to 3 coached sessions per week. That's the all-in price — no joining fees, no program fees, nothing extra. The first 12 weeks are a structured foundation block, and after that it rolls into a month-to-month arrangement. We cap the number of teens in the program so coaching stays personal, which is why spots are limited.",
-    },
-    {
       q: "Do I need to sign a contract?",
       a: "The first 12 weeks are a committed foundation block — that's how long it takes to build real strength, clean up technique and see proper results. After the initial 12 weeks it rolls into month-to-month, so you can pause, stop or adjust at any time. No year-long lock-ins, no trap contracts.",
     },

@@ -70,7 +70,7 @@ function ProgramSection({ onStartTrial }) {
             <span style={{
               width: 6, height: 6, borderRadius: 999, background: 'hsl(var(--yk-red))',
             }}/>
-            $67/week · Up to 3 coached sessions/week · Strictly limited spots
+            Up to 3 coached sessions/week · Strictly limited spots
           </div>
         </div>
 
@@ -109,21 +109,10 @@ function ProgramSection({ onStartTrial }) {
             </ul>
             <div style={{ marginTop: 'auto', paddingTop: 20, display: 'grid', gap: 16 }}>
               <div style={{
-                display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 20, alignItems: 'center',
                 padding: '18px 20px', borderRadius: 14,
                 background: 'hsl(0 0% 100% / .04)',
                 border: '1px solid hsl(0 0% 100% / .1)',
               }}>
-                <div>
-                  <div className="display" style={{
-                    fontSize: 44, fontWeight: 800, lineHeight: 1, color: 'white', letterSpacing: '-0.03em',
-                  }}>
-                    $67<span style={{ fontSize: 18, fontWeight: 600, color: 'hsl(0 0% 100% / .55)', marginLeft: 4 }}>/wk</span>
-                  </div>
-                  <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.12em', color: 'hsl(var(--yk-red))', marginTop: 4 }}>
-                    All-in price
-                  </div>
-                </div>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 6, fontSize: 13, color: 'hsl(0 0% 100% / .75)' }}>
                   <li style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                     <span style={{ width: 4, height: 4, borderRadius: 999, background: 'hsl(var(--yk-red))', flex: 'none' }}/>

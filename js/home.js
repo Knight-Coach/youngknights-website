@@ -419,7 +419,9 @@ function Header({
   }, "Get Started ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
-  }))), /*#__PURE__*/React.createElement("style", null, `
+  }))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         .nav-link { color: hsl(0 0% 100% / .75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .15s; }
         .nav-link:hover { color: white; }
         .nav-mobile-toggle { display: none; }
@@ -430,7 +432,9 @@ function Header({
         @media (max-width: 640px) {
           .hdr-powered { display: none !important; }
         }
-      `));
+      `
+    }
+  }));
 }
 function Hero({
   onStartTrial,
@@ -516,11 +520,15 @@ function Hero({
     label: "Parent rating"
   }))), /*#__PURE__*/React.createElement(HeroVisual, {
     onStartTrial: onStartTrial
-  }))), /*#__PURE__*/React.createElement("style", null, `
+  }))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         @media (max-width: 960px) {
           .hero-grid-layout { grid-template-columns: 1fr !important; gap: 40px !important; }
         }
-      `));
+      `
+    }
+  }));
 }
 function HeroStat({
   value,
@@ -771,7 +779,11 @@ function ProblemSection() {
       lineHeight: 1.55,
       color: 'hsl(var(--yk-ink) / .65)'
     }
-  }, it.body))))))), /*#__PURE__*/React.createElement("style", null, `@media (max-width: 900px) { .two-col { grid-template-columns: 1fr !important; gap: 48px !important; } }`));
+  }, it.body))))))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `@media (max-width: 900px) { .two-col { grid-template-columns: 1fr !important; gap: 48px !important; } }`
+    }
+  }));
 }
 function ProgramSection({
   onStartTrial
@@ -1102,10 +1114,14 @@ function HowItWorksSection() {
       lineHeight: 1.55,
       color: 'hsl(var(--yk-ink) / .6)'
     }
-  }, s.body))))), /*#__PURE__*/React.createElement("style", null, `
+  }, s.body))))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         @media (max-width: 1100px) { .five-col { grid-template-columns: repeat(2, 1fr) !important; } }
         @media (max-width: 600px) { .five-col { grid-template-columns: 1fr !important; } }
-      `));
+      `
+    }
+  }));
 }
 function CoachSection({
   onContact
@@ -1414,7 +1430,9 @@ function ReviewsSection() {
       color: 'hsl(var(--yk-ink) / .55)',
       margin: 0
     }
-  }, "Sourced from Google Reviews & direct parent feedback \xB7 Knight Fitness Studio, Lawnton")), /*#__PURE__*/React.createElement("style", null, `
+  }, "Sourced from Google Reviews & direct parent feedback \xB7 Knight Fitness Studio, Lawnton")), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         .rv-marquee {
           width: 100%; overflow: hidden; position: relative;
           -webkit-mask-image: linear-gradient(90deg, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
@@ -1432,7 +1450,9 @@ function ReviewsSection() {
         @media (prefers-reduced-motion: reduce) {
           .rv-left, .rv-right { animation: none; }
         }
-      `));
+      `
+    }
+  }));
 }
 function ReviewCard({
   r
@@ -1596,10 +1616,14 @@ function ResultsSection() {
       color: 'hsl(var(--yk-ink) / .5)',
       textAlign: 'center'
     }
-  }, "Results are indicative, based on Young Knights participants over the past 18 months. Every teen's journey is different.")), /*#__PURE__*/React.createElement("style", null, `
+  }, "Results are indicative, based on Young Knights participants over the past 18 months. Every teen's journey is different.")), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         @media (max-width: 1000px) { .four-col { grid-template-columns: repeat(2, 1fr) !important; } }
         @media (max-width: 560px) { .four-col { grid-template-columns: 1fr !important; } }
-      `));
+      `
+    }
+  }));
 }
 function CtaBand({
   onStartTrial,
@@ -2014,7 +2038,11 @@ function Footer() {
       color: 'hsl(0 0% 100% / .7)',
       textDecoration: 'none'
     }
-  }, "Privacy Policy"), /*#__PURE__*/React.createElement("span", null, "Built for teens. Backed by coaches.")))), /*#__PURE__*/React.createElement("style", null, `@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }`));
+  }, "Privacy Policy"), /*#__PURE__*/React.createElement("span", null, "Built for teens. Backed by coaches.")))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }`
+    }
+  }));
 }
 function FooterCol({
   title,
@@ -2423,7 +2451,9 @@ function ComparisonSection({
   }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
-  })))), /*#__PURE__*/React.createElement("style", null, `
+  })))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         .compare-grid {
           display: grid;
           grid-template-columns: 1.5fr 1fr 1fr 1fr;
@@ -2496,7 +2526,9 @@ function ComparisonSection({
             border-radius: 18px 18px 0 0;
           }
         }
-      `));
+      `
+    }
+  }));
 }
 window.ComparisonSection = ComparisonSection;
 })();
@@ -2691,11 +2723,15 @@ function FAQSection({
         color: 'hsl(var(--yk-ink) / .72)'
       }
     }, f.a))));
-  })))), /*#__PURE__*/React.createElement("style", null, `
+  })))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         @media (max-width: 900px) {
           .faq-aside { position: static !important; }
         }
-      `));
+      `
+    }
+  }));
 }
 Object.assign(window, {
   FAQSection
@@ -2952,14 +2988,18 @@ function ScheduleSection({
   }, "Book Your First Session ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
-  }))))), /*#__PURE__*/React.createElement("style", null, `
+  }))))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         @media (max-width: 1100px) {
           .schedule-grid { grid-template-columns: repeat(4, 1fr) !important; }
         }
         @media (max-width: 720px) {
           .schedule-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
-      `));
+      `
+    }
+  }));
 }
 function LegendDot({
   color,
@@ -3144,14 +3184,18 @@ function HowItWorksDetailed({
   }, "First Session Free ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
-  })))))))), /*#__PURE__*/React.createElement("style", null, `
+  })))))))), /*#__PURE__*/React.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: `
         @media (max-width: 900px) {
           .hiw-row { grid-template-columns: 1fr !important; gap: 32px !important; }
           .hiw-row > div { order: unset !important; }
           .hiw-row > div:first-child { order: 1 !important; }
           .hiw-row > div:last-child { order: 2 !important; }
         }
-      `));
+      `
+    }
+  }));
 }
 Object.assign(window, {
   ScheduleSection,
@@ -3168,10 +3212,6 @@ function UrgencyBar({
 }) {
   const [hidden, setHidden] = React.useState(false);
   if (hidden) return null;
-  const now = new Date();
-  const monthName = now.toLocaleString('default', {
-    month: 'long'
-  });
   return /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'relative',
@@ -3202,7 +3242,7 @@ function UrgencyBar({
       fontWeight: 800,
       letterSpacing: '.01em'
     }
-  }, "Limited spots"), /*#__PURE__*/React.createElement("span", null, "in our ", monthName, " intake")), /*#__PURE__*/React.createElement("button", {
+  }, "Limited spots"), /*#__PURE__*/React.createElement("span", null, "in this month's intake")), /*#__PURE__*/React.createElement("button", {
     onClick: onCta,
     style: {
       background: 'white',
@@ -3801,5 +3841,18 @@ function App() {
     onClick: () => setTweak('showStickyCta', false)
   }, "Off")))));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(App, null));
+Object.assign(window, {
+  App
+});
+
+// In the browser, hydrate the pre-rendered HTML (or mount fresh if absent).
+// During build-time pre-rendering there is no document, so this is skipped.
+if (typeof document !== 'undefined') {
+  const rootEl = document.getElementById('root');
+  if (rootEl.hasChildNodes()) {
+    ReactDOM.hydrateRoot(rootEl, /*#__PURE__*/React.createElement(App, null));
+  } else {
+    ReactDOM.createRoot(rootEl).render(/*#__PURE__*/React.createElement(App, null));
+  }
+}
 })();

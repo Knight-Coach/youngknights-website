@@ -3,8 +3,6 @@
 function UrgencyBar({ onCta }) {
   const [hidden, setHidden] = React.useState(false);
   if (hidden) return null;
-  const now = new Date();
-  const monthName = now.toLocaleString('default', { month: 'long' });
   return (
     <div style={{
       position: 'relative', zIndex: 50,
@@ -20,7 +18,7 @@ function UrgencyBar({ onCta }) {
         <strong style={{ fontWeight: 800, letterSpacing: '.01em' }}>
           Limited spots
         </strong>
-        <span>in our {monthName} intake</span>
+        <span>in this month's intake</span>
       </span>
       <button onClick={onCta} style={{
         background: 'white', color: 'hsl(var(--yk-red))',

@@ -546,7 +546,15 @@ Object.assign(window, {
 
 // --- components/GetStartedApp.jsx ---
 ;(function () {
-// Get Started page — mounts the qualification funnel to #root.
+// Get Started page — hydrates the pre-rendered funnel (or mounts fresh if absent).
+// During build-time pre-rendering there is no document, so this is skipped.
 
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(GetStarted, null));
+if (typeof document !== 'undefined') {
+  const rootEl = document.getElementById('root');
+  if (rootEl.hasChildNodes()) {
+    ReactDOM.hydrateRoot(rootEl, /*#__PURE__*/React.createElement(GetStarted, null));
+  } else {
+    ReactDOM.createRoot(rootEl).render(/*#__PURE__*/React.createElement(GetStarted, null));
+  }
+}
 })();

@@ -248,7 +248,7 @@ function ComparisonSection({ onStartTrial }) {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .compare-grid {
           display: grid;
           grid-template-columns: 1.5fr 1fr 1fr 1fr;
@@ -321,7 +321,7 @@ function ComparisonSection({ onStartTrial }) {
             border-radius: 18px 18px 0 0;
           }
         }
-      `}</style>
+      ` }}/>
     </section>
   );
 }

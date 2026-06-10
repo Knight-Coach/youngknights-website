@@ -98,4 +98,15 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+Object.assign(window, { App });
+
+// In the browser, hydrate the pre-rendered HTML (or mount fresh if absent).
+// During build-time pre-rendering there is no document, so this is skipped.
+if (typeof document !== 'undefined') {
+  const rootEl = document.getElementById('root');
+  if (rootEl.hasChildNodes()) {
+    ReactDOM.hydrateRoot(rootEl, <App/>);
+  } else {
+    ReactDOM.createRoot(rootEl).render(<App/>);
+  }
+}

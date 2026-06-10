@@ -65,7 +65,7 @@ function Header({ onStartTrial, onContact }) {
           </button>
         </div>
       )}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .nav-link { color: hsl(0 0% 100% / .75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .15s; }
         .nav-link:hover { color: white; }
         .nav-mobile-toggle { display: none; }
@@ -76,7 +76,7 @@ function Header({ onStartTrial, onContact }) {
         @media (max-width: 640px) {
           .hdr-powered { display: none !important; }
         }
-      `}</style>
+      ` }}/>
     </header>
   );
 }
@@ -117,11 +117,11 @@ function Hero({ onStartTrial, onContact }) {
           <HeroVisual onStartTrial={onStartTrial} />
         </div>
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 960px) {
           .hero-grid-layout { grid-template-columns: 1fr !important; gap: 40px !important; }
         }
-      `}</style>
+      ` }}/>
     </section>
   );
 }

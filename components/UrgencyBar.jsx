@@ -1,6 +1,6 @@
 // Thin urgency bar — "Limited spots for this month's intake"
 
-function UrgencyBar({ spotsLeft = 4, onCta }) {
+function UrgencyBar({ onCta }) {
   const [hidden, setHidden] = React.useState(false);
   if (hidden) return null;
   const now = new Date();
@@ -18,7 +18,7 @@ function UrgencyBar({ spotsLeft = 4, onCta }) {
       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
         <span style={{ fontSize: 16 }}>🔥</span>
         <strong style={{ fontWeight: 800, letterSpacing: '.01em' }}>
-          {spotsLeft} spots left
+          Limited spots
         </strong>
         <span>in our {monthName} intake</span>
       </span>

@@ -115,14 +115,14 @@ function ScheduleSection({ onStartTrial }) {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 1100px) {
           .schedule-grid { grid-template-columns: repeat(4, 1fr) !important; }
         }
         @media (max-width: 720px) {
           .schedule-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
-      `}</style>
+      ` }}/>
     </section>
   );
 }
@@ -233,14 +233,14 @@ function HowItWorksDetailed({ onStartTrial, onContact }) {
           ))}
         </div>
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 900px) {
           .hiw-row { grid-template-columns: 1fr !important; gap: 32px !important; }
           .hiw-row > div { order: unset !important; }
           .hiw-row > div:first-child { order: 1 !important; }
           .hiw-row > div:last-child { order: 2 !important; }
         }
-      `}</style>
+      ` }}/>
     </section>
   );
 }

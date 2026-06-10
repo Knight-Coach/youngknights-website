@@ -164,11 +164,11 @@ function FAQSection({ onStartTrial }) {
           </div>
         </div>
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 900px) {
           .faq-aside { position: static !important; }
         }
-      `}</style>
+      ` }}/>
     </section>
   );
 }

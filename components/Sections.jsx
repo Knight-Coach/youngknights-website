@@ -38,7 +38,7 @@ function ProblemSection() {
           </div>
         </div>
       </div>
-      <style>{`@media (max-width: 900px) { .two-col { grid-template-columns: 1fr !important; gap: 48px !important; } }`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 900px) { .two-col { grid-template-columns: 1fr !important; gap: 48px !important; } }` }}/>
     </section>
   );
 }
@@ -173,10 +173,10 @@ function HowItWorksSection() {
           ))}
         </div>
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 1100px) { .five-col { grid-template-columns: repeat(2, 1fr) !important; } }
         @media (max-width: 600px) { .five-col { grid-template-columns: 1fr !important; } }
-      `}</style>
+      ` }}/>
     </section>
   );
 }
@@ -307,7 +307,7 @@ function ReviewsSection() {
         </p>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rv-marquee {
           width: 100%; overflow: hidden; position: relative;
           -webkit-mask-image: linear-gradient(90deg, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
@@ -325,7 +325,7 @@ function ReviewsSection() {
         @media (prefers-reduced-motion: reduce) {
           .rv-left, .rv-right { animation: none; }
         }
-      `}</style>
+      ` }}/>
     </section>
   );
 }
@@ -393,10 +393,10 @@ function ResultsSection() {
           Results are indicative, based on Young Knights participants over the past 18 months. Every teen's journey is different.
         </p>
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 1000px) { .four-col { grid-template-columns: repeat(2, 1fr) !important; } }
         @media (max-width: 560px) { .four-col { grid-template-columns: 1fr !important; } }
-      `}</style>
+      ` }}/>
     </section>
   );
 }
@@ -561,7 +561,7 @@ function Footer() {
           </span>
         </div>
       </div>
-      <style>{`@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }` }}/>
     </footer>
   );
 }

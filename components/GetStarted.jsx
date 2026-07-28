@@ -176,27 +176,27 @@ function RevealStep({ answers, mode, setMode, onBack, onSubmitted }) {
         <div className="check"><Check size={22} stroke={3}/></div>
         <div>
           <h3>Young Knights is the right fit.</h3>
-          <p>Drop your details and we'll call within 24 hours to book your teen in for a session to see if it's the right fit.</p>
+          <p>Book a quick call with our team — pick a time that suits you and we'll get your teen booked in for a session to see if it's the right fit.</p>
         </div>
       </div>
 
-      <h2 className="gs-q" style={{ fontSize: 22, margin: '0 0 8px' }}>Tell us about your teen</h2>
+      <h2 className="gs-q" style={{ fontSize: 22, margin: '0 0 8px' }}>Book your call</h2>
       <p className="gs-sub" style={{ marginBottom: 16 }}>
-        Our team will call within 24 hours to book your teen in for a session and see if it's the right fit.
+        Pick a time below that works for you. We'll call to chat about your teen and book them in for a session to see if it's the right fit.
       </p>
 
       <div style={{ border: '1px solid hsl(var(--yk-line))', borderRadius: 14, overflow: 'hidden', marginBottom: 16 }}>
         <iframe
-          src="https://api.leadconnectorhq.com/widget/form/ATwKxumBh8CdpThEnu9I"
-          style={{ width: '100%', border: 'none', display: 'block', minHeight: 620 }}
-          id="gs-ghl-form-YK"
-          title="See if Young Knights is a fit for your teen"
-          onLoad={() => { try { onSubmitted && window.__gsFormLoaded; } catch(e){} }}
+          src="https://api.leadconnectorhq.com/widget/bookings/teenscoachingcallbookinggd5gz5h2ullm"
+          style={{ width: '100%', border: 'none', display: 'block', minHeight: 700 }}
+          scrolling="no"
+          id="teenscoachingcallbookinggd5gz5h2ullm_gs"
+          title="Book a call with Young Knights"
         />
       </div>
 
       <p className="gs-foot-note" style={{ marginBottom: 16 }}>
-        Prefer a quick call? <a href="tel:0452519877" style={{ color: 'hsl(var(--yk-red))', fontWeight: 600 }}>0452 519 877</a>
+        Prefer to talk now? <a href="tel:0452519877" style={{ color: 'hsl(var(--yk-red))', fontWeight: 600 }}>0452 519 877</a>
       </p>
 
       <div className="gs-nav">

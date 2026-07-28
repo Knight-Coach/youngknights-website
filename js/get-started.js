@@ -442,18 +442,18 @@ function RevealStep({
   }, /*#__PURE__*/React.createElement(Check, {
     size: 22,
     stroke: 3
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Young Knights is the right fit."), /*#__PURE__*/React.createElement("p", null, "Drop your details and we'll call within 24 hours to book your teen in for a session to see if it's the right fit."))), /*#__PURE__*/React.createElement("h2", {
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Young Knights is the right fit."), /*#__PURE__*/React.createElement("p", null, "Book a quick call with our team \u2014 pick a time that suits you and we'll get your teen booked in for a session to see if it's the right fit."))), /*#__PURE__*/React.createElement("h2", {
     className: "gs-q",
     style: {
       fontSize: 22,
       margin: '0 0 8px'
     }
-  }, "Tell us about your teen"), /*#__PURE__*/React.createElement("p", {
+  }, "Book your call"), /*#__PURE__*/React.createElement("p", {
     className: "gs-sub",
     style: {
       marginBottom: 16
     }
-  }, "Our team will call within 24 hours to book your teen in for a session and see if it's the right fit."), /*#__PURE__*/React.createElement("div", {
+  }, "Pick a time below that works for you. We'll call to chat about your teen and book them in for a session to see if it's the right fit."), /*#__PURE__*/React.createElement("div", {
     style: {
       border: '1px solid hsl(var(--yk-line))',
       borderRadius: 14,
@@ -461,26 +461,22 @@ function RevealStep({
       marginBottom: 16
     }
   }, /*#__PURE__*/React.createElement("iframe", {
-    src: "https://api.leadconnectorhq.com/widget/form/ATwKxumBh8CdpThEnu9I",
+    src: "https://api.leadconnectorhq.com/widget/bookings/teenscoachingcallbookinggd5gz5h2ullm",
     style: {
       width: '100%',
       border: 'none',
       display: 'block',
-      minHeight: 620
+      minHeight: 700
     },
-    id: "gs-ghl-form-YK",
-    title: "See if Young Knights is a fit for your teen",
-    onLoad: () => {
-      try {
-        onSubmitted && window.__gsFormLoaded;
-      } catch (e) {}
-    }
+    scrolling: "no",
+    id: "teenscoachingcallbookinggd5gz5h2ullm_gs",
+    title: "Book a call with Young Knights"
   })), /*#__PURE__*/React.createElement("p", {
     className: "gs-foot-note",
     style: {
       marginBottom: 16
     }
-  }, "Prefer a quick call? ", /*#__PURE__*/React.createElement("a", {
+  }, "Prefer to talk now? ", /*#__PURE__*/React.createElement("a", {
     href: "tel:0452519877",
     style: {
       color: 'hsl(var(--yk-red))',

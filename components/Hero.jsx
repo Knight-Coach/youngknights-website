@@ -105,7 +105,7 @@ function Hero({ onStartTrial, onContact }) {
             </p>
             <div style={{ display: 'flex', gap: 12, marginTop: 36, flexWrap: 'wrap' }}>
               <button className="btn btn-primary btn-lg" onClick={onStartTrial}>
-                See If It's a Fit <ArrowRight size={18} className="arrow"/>
+                Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
               </button>
             </div>
             <div style={{ marginTop: 44, display: 'flex', gap: 40, flexWrap: 'wrap' }}>
@@ -194,7 +194,7 @@ function HeroVisual({ onStartTrial }) {
           }}/>
           <button
             onClick={hasVideo ? play : onStartTrial}
-            aria-label={hasVideo ? 'Play video' : "See if it's a fit"}
+            aria-label={hasVideo ? 'Play video' : 'Fast-track your teen'}
             style={{
               position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
               width: 92, height: 92, borderRadius: 999,

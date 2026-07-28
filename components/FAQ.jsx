@@ -56,7 +56,7 @@ function FAQSection({ onStartTrial }) {
             </p>
             <div style={{ marginTop: 28, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <button className="btn btn-dark" onClick={onStartTrial}>
-                See If It's a Fit <ArrowRight size={18} className="arrow"/>
+                Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
               </button>
               <a href="tel:0452519877" className="btn btn-outline">
                 <Phone size={16}/> Call us

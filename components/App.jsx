@@ -66,7 +66,7 @@ function App() {
         <div className="sticky-cta">
           <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center', boxShadow: '0 10px 30px -6px rgba(0,0,0,.3)' }}
             onClick={openTrial}>
-            See If It's a Fit <ArrowRight size={18} className="arrow"/>
+            Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
           </button>
         </div>
       )}

@@ -130,7 +130,7 @@ function ProgramSection({ onStartTrial }) {
               </div>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <button className="btn btn-primary hide-cta-on-mobile" onClick={onStartTrial}>
-                  See If It's a Fit <ArrowRight size={18} className="arrow"/>
+                  Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
                 </button>
                 <a href="#schedule" className="btn btn-ghost-dark">View Schedule</a>
               </div>
@@ -415,7 +415,7 @@ function CtaBand({ onStartTrial, onContact }) {
         </p>
         <div style={{ marginTop: 36, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <button className="btn btn-primary btn-lg hide-cta-on-mobile" onClick={onStartTrial}>
-            See If It's a Fit <ArrowRight size={18} className="arrow"/>
+            Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
           </button>
         </div>
       </div>
@@ -548,7 +548,7 @@ function Footer() {
             <div className="eyebrow" style={{ color: 'hsl(var(--yk-red))', fontSize: 11 }}>Read</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: '16px 0 0', display: 'grid', gap: 10 }}>
               <li><a href="blog/" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>Articles & guides</a></li>
-              <li><a href="get-started.html" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>See if it's a fit</a></li>
+              <li><a href="get-started.html" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>Fast-track your teen</a></li>
               <li><a href="#faq" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>Parent FAQs</a></li>
             </ul>
           </div>

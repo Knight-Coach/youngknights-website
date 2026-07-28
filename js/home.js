@@ -499,7 +499,7 @@ function Hero({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary btn-lg",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   }))), /*#__PURE__*/React.createElement("div", {
@@ -615,7 +615,7 @@ function HeroVisual({
     }
   }), /*#__PURE__*/React.createElement("button", {
     onClick: hasVideo ? play : onStartTrial,
-    "aria-label": hasVideo ? 'Play video' : "See if it's a fit",
+    "aria-label": hasVideo ? 'Play video' : 'Fast-track your teen',
     style: {
       position: 'absolute',
       top: '50%',
@@ -1012,7 +1012,7 @@ function ProgramSection({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })), /*#__PURE__*/React.createElement("a", {
@@ -1686,7 +1686,7 @@ function CtaBand({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary btn-lg hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })))));
@@ -2007,7 +2007,7 @@ function Footer() {
       textDecoration: 'none',
       fontSize: 14
     }
-  }, "See if it's a fit")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+  }, "Fast-track your teen")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#faq",
     style: {
       color: 'hsl(0 0% 100% / .75)',
@@ -2448,7 +2448,7 @@ function ComparisonSection({
   }, "See the difference on the gym floor. Come in and see if it's the right fit for your teen."), /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary btn-lg hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })))), /*#__PURE__*/React.createElement("style", {
@@ -2622,7 +2622,7 @@ function FAQSection({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-dark",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })), /*#__PURE__*/React.createElement("a", {
@@ -2985,7 +2985,7 @@ function ScheduleSection({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   }))))), /*#__PURE__*/React.createElement("style", {
@@ -3181,7 +3181,7 @@ function HowItWorksDetailed({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary",
     onClick: onStartTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })))))))), /*#__PURE__*/React.createElement("style", {
@@ -3802,7 +3802,7 @@ function App() {
       boxShadow: '0 10px 30px -6px rgba(0,0,0,.3)'
     },
     onClick: openTrial
-  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "Fast-Track Your Teen ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   }))), tweaksOn && /*#__PURE__*/React.createElement("div", {

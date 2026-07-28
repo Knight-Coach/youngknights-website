@@ -243,7 +243,7 @@ function ComparisonSection({ onStartTrial }) {
             See the difference on the gym floor. Come in and see if it's the right fit for your teen.
           </p>
           <button className="btn btn-primary btn-lg hide-cta-on-mobile" onClick={onStartTrial}>
-            See If It's a Fit <ArrowRight size={18} className="arrow"/>
+            Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
           </button>
         </div>
       </div>

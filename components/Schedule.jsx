@@ -109,7 +109,7 @@ function ScheduleSection({ onStartTrial }) {
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <button className="btn btn-primary hide-cta-on-mobile" onClick={onStartTrial}>
-              See If It's a Fit <ArrowRight size={18} className="arrow"/>
+              Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
             </button>
           </div>
         </div>
@@ -224,7 +224,7 @@ function HowItWorksDetailed({ onStartTrial, onContact }) {
                 {i === steps.length - 1 && (
                   <div style={{ marginTop: 28, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <button className="btn btn-primary" onClick={onStartTrial}>
-                      See If It's a Fit <ArrowRight size={18} className="arrow"/>
+                      Fast-Track Your Teen <ArrowRight size={18} className="arrow"/>
                     </button>
                   </div>
                 )}

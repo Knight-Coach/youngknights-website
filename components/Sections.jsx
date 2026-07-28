@@ -130,7 +130,7 @@ function ProgramSection({ onStartTrial }) {
               </div>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <button className="btn btn-primary hide-cta-on-mobile" onClick={onStartTrial}>
-                  Book Free Session <ArrowRight size={18} className="arrow"/>
+                  See If It's a Fit <ArrowRight size={18} className="arrow"/>
                 </button>
                 <a href="#schedule" className="btn btn-ghost-dark">View Schedule</a>
               </div>
@@ -145,7 +145,7 @@ function ProgramSection({ onStartTrial }) {
 
 function HowItWorksSection() {
   const steps = [
-    { n: "01", title: "Book a Free Session", body: "Come in, meet Zac, try a session. No commitment, no pressure. Parents stay and watch." },
+    { n: "01", title: "See If It's a Fit", body: "Come in, meet Zac, try a session. No commitment, no pressure. Parents stay and watch." },
     { n: "02", title: "Screening & Testing", body: "We baseline their movement, strength and goals. Identify strengths and weak links." },
     { n: "03", title: "Personal Program", body: "They walk in knowing exactly what to do — built around their sport and level." },
     { n: "04", title: "Coach + Community", body: "Supervised sessions 2–3x per week. Real coaching. A team that shows up for each other." },
@@ -408,14 +408,14 @@ function CtaBand({ onStartTrial, onContact }) {
       <div className="container" style={{ position: 'relative', textAlign: 'center' }}>
         <div className="kicker-line kicker-dark" style={{ marginBottom: 20, justifyContent: 'center' }}>Ready when they are</div>
         <h2 className="h-display" style={{ fontSize: 'clamp(40px, 6vw, 80px)', margin: 0, color: 'white' }}>
-          Start their first session <span style={{ color: 'hsl(var(--yk-red))' }}>free</span>.
+          See if it's the <span style={{ color: 'hsl(var(--yk-red))' }}>right fit</span>.
         </h2>
         <p style={{ marginTop: 20, fontSize: 18, color: 'hsl(0 0% 100% / .7)', maxWidth: 560, margin: '20px auto 0' }}>
-          No contracts. No pressure. Come meet the team, try a session, see if it's the right fit.
+          No contracts. No pressure. Come meet the team, try a session, and see if Young Knights is right for your teen.
         </p>
         <div style={{ marginTop: 36, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <button className="btn btn-primary btn-lg hide-cta-on-mobile" onClick={onStartTrial}>
-            Book Free Session <ArrowRight size={18} className="arrow"/>
+            See If It's a Fit <ArrowRight size={18} className="arrow"/>
           </button>
         </div>
       </div>
@@ -548,7 +548,7 @@ function Footer() {
             <div className="eyebrow" style={{ color: 'hsl(var(--yk-red))', fontSize: 11 }}>Read</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: '16px 0 0', display: 'grid', gap: 10 }}>
               <li><a href="blog/" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>Articles & guides</a></li>
-              <li><a href="get-started.html" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>Book a free session</a></li>
+              <li><a href="get-started.html" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>See if it's a fit</a></li>
               <li><a href="#faq" style={{ color: 'hsl(0 0% 100% / .75)', textDecoration: 'none', fontSize: 14 }}>Parent FAQs</a></li>
             </ul>
           </div>

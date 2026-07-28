@@ -40,7 +40,7 @@ const QUESTIONS = [
     q: "How soon are you looking to start?",
     sub: "We're limited to small groups — let us know your timeline.",
     options: [
-      { val: 'this-week',   label: 'This week',               sub: "Let's get you in for a trial ASAP." },
+      { val: 'this-week',   label: 'This week',               sub: "Let's get you in for a session ASAP." },
       { val: 'next-2wks',   label: 'Next 1–2 weeks',           sub: "Plenty of time — we'll hold a spot." },
       { val: 'this-month',  label: 'Sometime this month',     sub: "No rush. Come see the studio first if you like." },
       { val: 'exploring',   label: 'Just exploring',          sub: "Happy to send info and answer questions." },
@@ -176,13 +176,13 @@ function RevealStep({ answers, mode, setMode, onBack, onSubmitted }) {
         <div className="check"><Check size={22} stroke={3}/></div>
         <div>
           <h3>Young Knights is the right fit.</h3>
-          <p>Drop your details and we'll call within 24 hours to book in a free trial class.</p>
+          <p>Drop your details and we'll call within 24 hours to book your teen in for a session to see if it's the right fit.</p>
         </div>
       </div>
 
       <h2 className="gs-q" style={{ fontSize: 22, margin: '0 0 8px' }}>Tell us about your teen</h2>
       <p className="gs-sub" style={{ marginBottom: 16 }}>
-        Our team will call within 24 hours to book your teen's free trial class.
+        Our team will call within 24 hours to book your teen in for a session and see if it's the right fit.
       </p>
 
       <div style={{ border: '1px solid hsl(var(--yk-line))', borderRadius: 14, overflow: 'hidden', marginBottom: 16 }}>
@@ -190,7 +190,7 @@ function RevealStep({ answers, mode, setMode, onBack, onSubmitted }) {
           src="https://api.leadconnectorhq.com/widget/form/ATwKxumBh8CdpThEnu9I"
           style={{ width: '100%', border: 'none', display: 'block', minHeight: 620 }}
           id="gs-ghl-form-YK"
-          title="Book a free trial class"
+          title="See if Young Knights is a fit for your teen"
           onLoad={() => { try { onSubmitted && window.__gsFormLoaded; } catch(e){} }}
         />
       </div>
@@ -214,14 +214,14 @@ function ConfirmStep({ answers }) {
     <div className="gs-confirm">
       <div className="big-check"><Check size={44} stroke={3}/></div>
       <h2>Thanks — we've got your details.</h2>
-      <p>Our team will call within 24 hours to book your teen's free trial class.</p>
+      <p>Our team will call within 24 hours to book your teen in for a session and see if it's the right fit.</p>
 
       <div className="next-steps">
         <h4>What happens next</h4>
         <ol style={{ margin: 0, paddingLeft: 20 }}>
           <li>We call to chat — 10 minute conversation, no pressure.</li>
-          <li>Book a trial class that fits your family's schedule.</li>
-          <li>Come in, meet the team, try a session. Parents welcome to watch.</li>
+          <li>Book a session that fits your family's schedule.</li>
+          <li>Come in, meet the team, try a session, and see if it's a fit. Parents welcome to watch.</li>
         </ol>
       </div>
 

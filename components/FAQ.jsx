@@ -24,15 +24,15 @@ function FAQSection({ onStartTrial }) {
     },
     {
       q: "How much does it cost?",
-      a: "Pricing depends on the program and how many sessions a week suit your teen, so we'd rather have a quick chat than quote a one-size-fits-all number. Call Zac on 0452 519 877 or book a free session and we'll walk you through the options — no pressure, no obligation. There are no joining fees or hidden extras.",
+      a: "Pricing depends on the program and how many sessions a week suit your teen, so we'd rather have a quick chat than quote a one-size-fits-all number. Call Zac on 0452 519 877 or come in to see if it's a fit and we'll walk you through the options — no pressure, no obligation. There are no joining fees or hidden extras.",
     },
     {
       q: "Do I need to sign a contract?",
       a: "The first 12 weeks are a committed foundation block — that's how long it takes to build real strength, clean up technique and see proper results. After the initial 12 weeks it rolls into month-to-month, so you can pause, stop or adjust at any time. No year-long lock-ins, no trap contracts.",
     },
     {
-      q: "What happens on the free session?",
-      a: "Book in, turn up, train. Your teen joins a real session, meets Zac and the crew, gets coached through a proper workout, and walks out knowing exactly what Young Knights is about. Parents stay if they want to. No pressure, no sales pitch at the end — if it's a fit, we talk next steps. If it's not, no hard feelings.",
+      q: "What happens on the first session?",
+      a: "Book in, turn up, train. Your teen joins a real session, meets Zac and the crew, gets coached through a proper workout, and walks out knowing exactly what Young Knights is about. It's the best way to see if it's the right fit. Parents stay if they want to. No pressure, no sales pitch at the end — if it's a fit, we talk next steps. If it's not, no hard feelings.",
     },
     {
       q: "What if my teen plays a specific sport — rugby, netball, AFL, footy?",
@@ -52,11 +52,11 @@ function FAQSection({ onStartTrial }) {
               The questions <span className="mark">every parent</span> asks us first.
             </h2>
             <p style={{ marginTop: 20, fontSize: 16, lineHeight: 1.6, color: 'hsl(var(--yk-ink) / .7)', maxWidth: 420 }}>
-              Still have questions? Give us a call on 0452 519 877 — or book a free session and see for yourself.
+              Still have questions? Give us a call on 0452 519 877 — or come in and see if it's a fit for yourself.
             </p>
             <div style={{ marginTop: 28, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <button className="btn btn-dark" onClick={onStartTrial}>
-                Book Free Session <ArrowRight size={18} className="arrow"/>
+                See If It's a Fit <ArrowRight size={18} className="arrow"/>
               </button>
               <a href="tel:0452519877" className="btn btn-outline">
                 <Phone size={16}/> Call us

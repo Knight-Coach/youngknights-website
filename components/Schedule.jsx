@@ -109,7 +109,7 @@ function ScheduleSection({ onStartTrial }) {
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <button className="btn btn-primary hide-cta-on-mobile" onClick={onStartTrial}>
-              Book Your First Session <ArrowRight size={18} className="arrow"/>
+              See If It's a Fit <ArrowRight size={18} className="arrow"/>
             </button>
           </div>
         </div>
@@ -141,8 +141,8 @@ function HowItWorksDetailed({ onStartTrial, onContact }) {
   const steps = [
     {
       n: '01',
-      title: 'Book your free session',
-      body: "Come in, meet Coach Zac and try a session. No commitment, no pressure. Parents are welcome to stay and watch — we want you to see exactly how we coach your teen.",
+      title: "See if it's a fit",
+      body: "Come in, meet Coach Zac and try a session. No commitment, no pressure. Parents are welcome to stay and watch — we want you to see exactly how we coach your teen, so you can decide if it's the right fit.",
       photo: 'whiteboard',
       photoLabel: 'Session briefing · Knight Fitness Studio',
     },
@@ -224,7 +224,7 @@ function HowItWorksDetailed({ onStartTrial, onContact }) {
                 {i === steps.length - 1 && (
                   <div style={{ marginTop: 28, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <button className="btn btn-primary" onClick={onStartTrial}>
-                      First Session Free <ArrowRight size={18} className="arrow"/>
+                      See If It's a Fit <ArrowRight size={18} className="arrow"/>
                     </button>
                   </div>
                 )}

@@ -267,7 +267,7 @@ const QUESTIONS = [{
   options: [{
     val: 'this-week',
     label: 'This week',
-    sub: "Let's get you in for a trial ASAP."
+    sub: "Let's get you in for a session ASAP."
   }, {
     val: 'next-2wks',
     label: 'Next 1–2 weeks',
@@ -442,7 +442,7 @@ function RevealStep({
   }, /*#__PURE__*/React.createElement(Check, {
     size: 22,
     stroke: 3
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Young Knights is the right fit."), /*#__PURE__*/React.createElement("p", null, "Drop your details and we'll call within 24 hours to book in a free trial class."))), /*#__PURE__*/React.createElement("h2", {
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Young Knights is the right fit."), /*#__PURE__*/React.createElement("p", null, "Drop your details and we'll call within 24 hours to book your teen in for a session to see if it's the right fit."))), /*#__PURE__*/React.createElement("h2", {
     className: "gs-q",
     style: {
       fontSize: 22,
@@ -453,7 +453,7 @@ function RevealStep({
     style: {
       marginBottom: 16
     }
-  }, "Our team will call within 24 hours to book your teen's free trial class."), /*#__PURE__*/React.createElement("div", {
+  }, "Our team will call within 24 hours to book your teen in for a session and see if it's the right fit."), /*#__PURE__*/React.createElement("div", {
     style: {
       border: '1px solid hsl(var(--yk-line))',
       borderRadius: 14,
@@ -469,7 +469,7 @@ function RevealStep({
       minHeight: 620
     },
     id: "gs-ghl-form-YK",
-    title: "Book a free trial class",
+    title: "See if Young Knights is a fit for your teen",
     onLoad: () => {
       try {
         onSubmitted && window.__gsFormLoaded;
@@ -512,14 +512,14 @@ function ConfirmStep({
   }, /*#__PURE__*/React.createElement(Check, {
     size: 44,
     stroke: 3
-  })), /*#__PURE__*/React.createElement("h2", null, "Thanks \u2014 we've got your details."), /*#__PURE__*/React.createElement("p", null, "Our team will call within 24 hours to book your teen's free trial class."), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("h2", null, "Thanks \u2014 we've got your details."), /*#__PURE__*/React.createElement("p", null, "Our team will call within 24 hours to book your teen in for a session and see if it's the right fit."), /*#__PURE__*/React.createElement("div", {
     className: "next-steps"
   }, /*#__PURE__*/React.createElement("h4", null, "What happens next"), /*#__PURE__*/React.createElement("ol", {
     style: {
       margin: 0,
       paddingLeft: 20
     }
-  }, /*#__PURE__*/React.createElement("li", null, "We call to chat \u2014 10 minute conversation, no pressure."), /*#__PURE__*/React.createElement("li", null, "Book a trial class that fits your family's schedule."), /*#__PURE__*/React.createElement("li", null, "Come in, meet the team, try a session. Parents welcome to watch."))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("li", null, "We call to chat \u2014 10 minute conversation, no pressure."), /*#__PURE__*/React.createElement("li", null, "Book a session that fits your family's schedule."), /*#__PURE__*/React.createElement("li", null, "Come in, meet the team, try a session, and see if it's a fit. Parents welcome to watch."))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 28,
       display: 'flex',

@@ -1,4 +1,4 @@
-// Modals for Free Session + Contact Coach
+// Modals for booking a session + Contact Coach
 
 function Modal({ open, onClose, children, maxWidth = 520 }) {
   React.useEffect(() => {
@@ -44,7 +44,7 @@ function FreeTrialModal({ open, onClose }) {
       {/* Header */}
       <div style={{ padding: '32px 32px 0', position: 'relative' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
-          <span className="chip chip-gold" style={{ fontSize: 11 }}>FREE SESSION</span>
+          <span className="chip chip-gold" style={{ fontSize: 11 }}>FIRST SESSION</span>
           <span style={{ fontSize: 12, color: 'hsl(var(--yk-ink) / .5)', fontWeight: 600 }}>Step {step} of 4</span>
         </div>
         <h2 className="display" style={{ margin: 0, fontSize: 26, fontWeight: 800, letterSpacing: '-0.02em' }}>
@@ -165,7 +165,7 @@ function FreeTrialModal({ open, onClose }) {
             Continue <ArrowRight size={18} className="arrow"/>
           </button>}
           {step === 4 && <button onClick={next} className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }}>
-            Book Free Session <Check size={18}/>
+            Book Session <Check size={18}/>
           </button>}
         </div>
       </div>

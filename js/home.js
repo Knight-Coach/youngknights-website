@@ -499,7 +499,7 @@ function Hero({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary btn-lg",
     onClick: onStartTrial
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   }))), /*#__PURE__*/React.createElement("div", {
@@ -615,7 +615,7 @@ function HeroVisual({
     }
   }), /*#__PURE__*/React.createElement("button", {
     onClick: hasVideo ? play : onStartTrial,
-    "aria-label": hasVideo ? 'Play video' : 'Book free session',
+    "aria-label": hasVideo ? 'Play video' : "See if it's a fit",
     style: {
       position: 'absolute',
       top: '50%',
@@ -1012,7 +1012,7 @@ function ProgramSection({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })), /*#__PURE__*/React.createElement("a", {
@@ -1029,7 +1029,7 @@ function ProgramSection({
 function HowItWorksSection() {
   const steps = [{
     n: "01",
-    title: "Book a Free Session",
+    title: "See If It's a Fit",
     body: "Come in, meet Zac, try a session. No commitment, no pressure. Parents stay and watch."
   }, {
     n: "02",
@@ -1663,11 +1663,11 @@ function CtaBand({
       margin: 0,
       color: 'white'
     }
-  }, "Start their first session ", /*#__PURE__*/React.createElement("span", {
+  }, "See if it's the ", /*#__PURE__*/React.createElement("span", {
     style: {
       color: 'hsl(var(--yk-red))'
     }
-  }, "free"), "."), /*#__PURE__*/React.createElement("p", {
+  }, "right fit"), "."), /*#__PURE__*/React.createElement("p", {
     style: {
       marginTop: 20,
       fontSize: 18,
@@ -1675,7 +1675,7 @@ function CtaBand({
       maxWidth: 560,
       margin: '20px auto 0'
     }
-  }, "No contracts. No pressure. Come meet the team, try a session, see if it's the right fit."), /*#__PURE__*/React.createElement("div", {
+  }, "No contracts. No pressure. Come meet the team, try a session, and see if Young Knights is right for your teen."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 36,
       display: 'flex',
@@ -1686,7 +1686,7 @@ function CtaBand({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary btn-lg hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })))));
@@ -2007,7 +2007,7 @@ function Footer() {
       textDecoration: 'none',
       fontSize: 14
     }
-  }, "Book a free session")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+  }, "See if it's a fit")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#faq",
     style: {
       color: 'hsl(0 0% 100% / .75)',
@@ -2445,10 +2445,10 @@ function ComparisonSection({
       maxWidth: 560,
       margin: '0 auto 24px'
     }
-  }, "See the difference on the gym floor. Your teen's first session is on us."), /*#__PURE__*/React.createElement("button", {
+  }, "See the difference on the gym floor. Come in and see if it's the right fit for your teen."), /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary btn-lg hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })))), /*#__PURE__*/React.createElement("style", {
@@ -2557,13 +2557,13 @@ function FAQSection({
     a: "Yes, always. Parents are welcome to stay, watch and ask questions — especially for the first few sessions. A lot of parents love seeing their teen's progress first-hand. After a few weeks most teens are happy being dropped off, but you're never locked out."
   }, {
     q: "How much does it cost?",
-    a: "Pricing depends on the program and how many sessions a week suit your teen, so we'd rather have a quick chat than quote a one-size-fits-all number. Call Zac on 0452 519 877 or book a free session and we'll walk you through the options — no pressure, no obligation. There are no joining fees or hidden extras."
+    a: "Pricing depends on the program and how many sessions a week suit your teen, so we'd rather have a quick chat than quote a one-size-fits-all number. Call Zac on 0452 519 877 or come in to see if it's a fit and we'll walk you through the options — no pressure, no obligation. There are no joining fees or hidden extras."
   }, {
     q: "Do I need to sign a contract?",
     a: "The first 12 weeks are a committed foundation block — that's how long it takes to build real strength, clean up technique and see proper results. After the initial 12 weeks it rolls into month-to-month, so you can pause, stop or adjust at any time. No year-long lock-ins, no trap contracts."
   }, {
-    q: "What happens on the free session?",
-    a: "Book in, turn up, train. Your teen joins a real session, meets Zac and the crew, gets coached through a proper workout, and walks out knowing exactly what Young Knights is about. Parents stay if they want to. No pressure, no sales pitch at the end — if it's a fit, we talk next steps. If it's not, no hard feelings."
+    q: "What happens on the first session?",
+    a: "Book in, turn up, train. Your teen joins a real session, meets Zac and the crew, gets coached through a proper workout, and walks out knowing exactly what Young Knights is about. It's the best way to see if it's the right fit. Parents stay if they want to. No pressure, no sales pitch at the end — if it's a fit, we talk next steps. If it's not, no hard feelings."
   }, {
     q: "What if my teen plays a specific sport — rugby, netball, AFL, footy?",
     a: "That's where we shine. Every program is personalised to the sport your teen plays, the position they play, and the demands of their season. Rugby kids get different work to netballers. Swimmers train differently to sprinters. We've worked with teens across rugby league, AFL, football, netball, touch, athletics, swimming, basketball, cricket and more — and we build their program to make them better at the game they love."
@@ -2612,7 +2612,7 @@ function FAQSection({
       color: 'hsl(var(--yk-ink) / .7)',
       maxWidth: 420
     }
-  }, "Still have questions? Give us a call on 0452 519 877 \u2014 or book a free session and see for yourself."), /*#__PURE__*/React.createElement("div", {
+  }, "Still have questions? Give us a call on 0452 519 877 \u2014 or come in and see if it's a fit for yourself."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 28,
       display: 'flex',
@@ -2622,7 +2622,7 @@ function FAQSection({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-dark",
     onClick: onStartTrial
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })), /*#__PURE__*/React.createElement("a", {
@@ -2985,7 +2985,7 @@ function ScheduleSection({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary hide-cta-on-mobile",
     onClick: onStartTrial
-  }, "Book Your First Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   }))))), /*#__PURE__*/React.createElement("style", {
@@ -3031,8 +3031,8 @@ function HowItWorksDetailed({
 }) {
   const steps = [{
     n: '01',
-    title: 'Book your free session',
-    body: "Come in, meet Coach Zac and try a session. No commitment, no pressure. Parents are welcome to stay and watch — we want you to see exactly how we coach your teen.",
+    title: "See if it's a fit",
+    body: "Come in, meet Coach Zac and try a session. No commitment, no pressure. Parents are welcome to stay and watch — we want you to see exactly how we coach your teen, so you can decide if it's the right fit.",
     photo: 'whiteboard',
     photoLabel: 'Session briefing · Knight Fitness Studio'
   }, {
@@ -3181,7 +3181,7 @@ function HowItWorksDetailed({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn-primary",
     onClick: onStartTrial
-  }, "First Session Free ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   })))))))), /*#__PURE__*/React.createElement("style", {
@@ -3279,7 +3279,7 @@ window.UrgencyBar = UrgencyBar;
 
 // --- components/Modals.jsx ---
 ;(function () {
-// Modals for Free Session + Contact Coach
+// Modals for booking a session + Contact Coach
 
 function Modal({
   open,
@@ -3385,7 +3385,7 @@ function FreeTrialModal({
     style: {
       fontSize: 11
     }
-  }, "FREE SESSION"), /*#__PURE__*/React.createElement("span", {
+  }, "FIRST SESSION"), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 12,
       color: 'hsl(var(--yk-ink) / .5)',
@@ -3612,7 +3612,7 @@ function FreeTrialModal({
       flex: 1,
       justifyContent: 'center'
     }
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(Check, {
+  }, "Book Session ", /*#__PURE__*/React.createElement(Check, {
     size: 18
   })))), step === 5 && /*#__PURE__*/React.createElement("div", {
     style: {
@@ -3802,7 +3802,7 @@ function App() {
       boxShadow: '0 10px 30px -6px rgba(0,0,0,.3)'
     },
     onClick: openTrial
-  }, "Book Free Session ", /*#__PURE__*/React.createElement(ArrowRight, {
+  }, "See If It's a Fit ", /*#__PURE__*/React.createElement(ArrowRight, {
     size: 18,
     className: "arrow"
   }))), tweaksOn && /*#__PURE__*/React.createElement("div", {

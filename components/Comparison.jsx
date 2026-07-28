@@ -240,10 +240,10 @@ function ComparisonSection({ onStartTrial }) {
             fontSize: 16, color: 'hsl(var(--yk-ink) / .65)',
             maxWidth: 560, margin: '0 auto 24px',
           }}>
-            See the difference on the gym floor. Your teen's first session is on us.
+            See the difference on the gym floor. Come in and see if it's the right fit for your teen.
           </p>
           <button className="btn btn-primary btn-lg hide-cta-on-mobile" onClick={onStartTrial}>
-            Book Free Session <ArrowRight size={18} className="arrow"/>
+            See If It's a Fit <ArrowRight size={18} className="arrow"/>
           </button>
         </div>
       </div>

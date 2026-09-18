@@ -9,6 +9,7 @@ function ScheduleSection({ onStartTrial }) {
     ]},
     { day: 'TUE', sessions: [
       { time: '4:50 PM', name: 'Young Knights · Teens 13–17', tag: 'After School' },
+      { time: '5:40 PM', name: 'Young Knights · Teens 13–17', tag: 'After School' },
     ]},
     { day: 'WED', sessions: [
       { time: '4:50 PM', name: 'Young Knights · Teens 13–17', tag: 'After School' },
@@ -16,6 +17,7 @@ function ScheduleSection({ onStartTrial }) {
     ]},
     { day: 'THU', sessions: [
       { time: '4:50 PM', name: 'Young Knights · Teens 13–17', tag: 'After School' },
+      { time: '5:40 PM', name: 'Young Knights · Teens 13–17', tag: 'After School' },
       { time: '6:30 PM', name: 'Young Knights · Teens 13–17', tag: 'Evening' },
     ]},
     { day: 'FRI', sessions: [

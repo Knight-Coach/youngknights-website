@@ -2763,6 +2763,10 @@ function ScheduleSection({
       time: '4:50 PM',
       name: 'Young Knights · Teens 13–17',
       tag: 'After School'
+    }, {
+      time: '5:40 PM',
+      name: 'Young Knights · Teens 13–17',
+      tag: 'After School'
     }]
   }, {
     day: 'WED',
@@ -2779,6 +2783,10 @@ function ScheduleSection({
     day: 'THU',
     sessions: [{
       time: '4:50 PM',
+      name: 'Young Knights · Teens 13–17',
+      tag: 'After School'
+    }, {
+      time: '5:40 PM',
       name: 'Young Knights · Teens 13–17',
       tag: 'After School'
     }, {

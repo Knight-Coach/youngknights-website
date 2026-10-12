@@ -489,22 +489,18 @@ function ContactRow({ icon: Icon, label, value, href }) {
 }
 
 function InlineContactForm() {
-  // GoHighLevel form — replaces the old fake form.
-  // Submissions flow straight into the Young Knights GHL pipeline.
+  // Knight Admin's enquiry form (components/EnquiryForm.jsx): into Slack, HighLevel and the staff boards.
   return (
     <div className="card" style={{ padding: 0, overflow: 'hidden', background: 'white' }}>
       <div style={{ padding: '28px 32px 8px' }}>
         <h3 className="display" style={{ margin: 0, fontSize: 24, fontWeight: 800 }}>Send us a message</h3>
         <p style={{ margin: '8px 0 0', color: 'hsl(var(--yk-ink) / .65)', fontSize: 14, lineHeight: 1.5 }}>
-          Drop your details and our team will reply within 24 hours.
+          Drop your details and Zac will call you back, usually the same day.
         </p>
       </div>
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/ATwKxumBh8CdpThEnu9I"
-        style={{ width: '100%', border: 'none', display: 'block', minHeight: 560 }}
-        id="inline-ghl-form-YK"
-        title="Contact Young Knights"
-      />
+      <div style={{ padding: '0 20px 20px' }}>
+        <EnquiryForm source="young-knights-contact" title="Contact Young Knights" />
+      </div>
     </div>
   );
 }

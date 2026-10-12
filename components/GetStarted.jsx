@@ -48,7 +48,8 @@ const QUESTIONS = [
   },
 ];
 
-// GHL form handles submission; confirmation is shown inside the form iframe.
+// The HighLevel calendar books the call; Knight Admin's enquiry form (EnquiryForm.jsx) takes the details of anyone
+// who'd rather be called. Each confirms inside its own iframe.
 
 function GetStarted() {
   const [step, setStep] = React.useState(0); // 0..3 = questions, 4 = reveal, 5 = confirm
@@ -198,6 +199,14 @@ function RevealStep({ answers, mode, setMode, onBack, onSubmitted }) {
       <p className="gs-foot-note" style={{ marginBottom: 16 }}>
         Prefer to talk now? <a href="tel:0452519877" style={{ color: 'hsl(var(--yk-red))', fontWeight: 600 }}>0452 519 877</a>
       </p>
+
+      <h3 className="gs-q" style={{ fontSize: 18, margin: '24px 0 6px' }}>No time that suits?</h3>
+      <p className="gs-sub" style={{ marginBottom: 12 }}>
+        Leave your details and Zac will call you back, usually the same day.
+      </p>
+      <div style={{ border: '1px solid hsl(var(--yk-line))', borderRadius: 14, overflow: 'hidden', padding: '8px 12px', marginBottom: 16 }}>
+        <EnquiryForm source="young-knights-get-started" title="Leave your details for Young Knights" />
+      </div>
 
       <div className="gs-nav">
         <button className="gs-back" onClick={onBack}><ArrowLeft size={14}/> Back</button>

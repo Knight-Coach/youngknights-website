@@ -19,10 +19,10 @@ const ReactDOMServer = require('react-dom/server');
 
 const BUNDLES = {
   'js/home.js': [
-    'Icons', 'Photo', 'Hero', 'Sections', 'Comparison',
+    'Icons', 'Photo', 'EnquiryForm', 'Hero', 'Sections', 'Comparison',
     'FAQ', 'Schedule', 'UrgencyBar', 'Modals', 'App',
   ],
-  'js/get-started.js': ['Icons', 'GetStarted', 'GetStartedApp'],
+  'js/get-started.js': ['Icons', 'EnquiryForm', 'GetStarted', 'GetStartedApp'],
 };
 
 // page -> [bundle, html file, global component name to render]

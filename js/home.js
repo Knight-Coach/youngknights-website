@@ -265,6 +265,71 @@ function Photo({
 window.Photo = Photo;
 })();
 
+// --- components/EnquiryForm.jsx ---
+;(function () {
+// Knight Admin's enquiry form (knight-agent /form/enquiry) in an iframe: every enquiry is posted in Slack with a
+// lead card for the teens coach, tagged and noted on the parent's HighLevel contact, and counted on the staff
+// boards' sales pipeline. The site fixes the gym and program, so it asks the parent's name, mobile, email, the
+// teen's age and an optional message.
+//
+// The form posts {type: 'kf-form', height} as it renders, so the frame is sized to fit, and {submitted: true}
+// once the enquiry is in (it shows its own thank-you). Only messages from ENQUIRY_ORIGIN, from this frame, count.
+
+const ENQUIRY_ORIGIN = 'https://knight-agent.vercel.app';
+
+// `source` names the page the form is on (young-knights-<where>): it's on the Slack card, in the HighLevel note,
+// and a HighLevel tag (from-<source>) a follow-up workflow can trigger on.
+function enquiryFormSrc(source) {
+  return `${ENQUIRY_ORIGIN}/form/enquiry?embed=1&site=lawnton&program=young-knights&fix=program&src=${encodeURIComponent(source)}`;
+}
+function EnquiryForm({
+  source,
+  title,
+  minHeight = 620
+}) {
+  const ref = React.useRef(null);
+  const [height, setHeight] = React.useState(minHeight);
+  React.useEffect(() => {
+    const onMsg = e => {
+      if (e.origin !== ENQUIRY_ORIGIN || !ref.current || e.source !== ref.current.contentWindow) return;
+      const d = e.data;
+      if (!d || typeof d !== 'object' || d.type !== 'kf-form') return;
+      const h = parseInt(d.height, 10);
+      if (h >= 120 && h <= 4000) setHeight(h);
+      if (d.submitted) {
+        // A sent enquiry is the site's conversion. Analytics must never break the page.
+        try {
+          if (window.gtag) window.gtag('event', 'generate_lead', {
+            form: source
+          });
+          if (window.fbq) window.fbq('track', 'Lead');
+        } catch (_) {/* ignore */}
+      }
+    };
+    window.addEventListener('message', onMsg);
+    return () => window.removeEventListener('message', onMsg);
+  }, [source]);
+  return /*#__PURE__*/React.createElement("iframe", {
+    ref: ref,
+    src: enquiryFormSrc(source),
+    title: title,
+    "data-kf-form": "enquiry",
+    loading: "lazy",
+    style: {
+      width: '100%',
+      border: 'none',
+      display: 'block',
+      height
+    }
+  });
+}
+Object.assign(window, {
+  EnquiryForm,
+  enquiryFormSrc,
+  ENQUIRY_ORIGIN
+});
+})();
+
 // --- components/Hero.jsx ---
 ;(function () {
 // Header + Hero
@@ -1827,8 +1892,7 @@ function ContactRow({
   }, content);
 }
 function InlineContactForm() {
-  // GoHighLevel form — replaces the old fake form.
-  // Submissions flow straight into the Young Knights GHL pipeline.
+  // Knight Admin's enquiry form (components/EnquiryForm.jsx): into Slack, HighLevel and the staff boards.
   return /*#__PURE__*/React.createElement("div", {
     className: "card",
     style: {
@@ -1854,17 +1918,14 @@ function InlineContactForm() {
       fontSize: 14,
       lineHeight: 1.5
     }
-  }, "Drop your details and our team will reply within 24 hours.")), /*#__PURE__*/React.createElement("iframe", {
-    src: "https://api.leadconnectorhq.com/widget/form/ATwKxumBh8CdpThEnu9I",
+  }, "Drop your details and Zac will call you back, usually the same day.")), /*#__PURE__*/React.createElement("div", {
     style: {
-      width: '100%',
-      border: 'none',
-      display: 'block',
-      minHeight: 560
-    },
-    id: "inline-ghl-form-YK",
+      padding: '0 20px 20px'
+    }
+  }, /*#__PURE__*/React.createElement(EnquiryForm, {
+    source: "young-knights-contact",
     title: "Contact Young Knights"
-  }));
+  })));
 }
 function Footer() {
   return /*#__PURE__*/React.createElement("footer", {
@@ -3287,7 +3348,7 @@ window.UrgencyBar = UrgencyBar;
 
 // --- components/Modals.jsx ---
 ;(function () {
-// Modals for booking a session + Contact Coach
+// Modals: Contact Coach (the booking flow is get-started.html)
 
 function Modal({
   open,
@@ -3337,324 +3398,6 @@ function Modal({
     size: 18
   })), children));
 }
-function FreeTrialModal({
-  open,
-  onClose
-}) {
-  const [step, setStep] = React.useState(1);
-  const [form, setForm] = React.useState({
-    parent: '',
-    email: '',
-    phone: '',
-    teenName: '',
-    teenAge: '',
-    sport: '',
-    level: '',
-    day: '',
-    time: ''
-  });
-  const next = () => setStep(s => Math.min(4, s + 1));
-  const back = () => setStep(s => Math.max(1, s - 1));
-  const reset = () => {
-    setStep(1);
-    setForm({
-      parent: '',
-      email: '',
-      phone: '',
-      teenName: '',
-      teenAge: '',
-      sport: '',
-      level: '',
-      day: '',
-      time: ''
-    });
-  };
-  React.useEffect(() => {
-    if (open) reset();
-  }, [open]);
-  return /*#__PURE__*/React.createElement(Modal, {
-    open: open,
-    onClose: onClose,
-    maxWidth: 540
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: '32px 32px 0',
-      position: 'relative'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 10,
-      marginBottom: 12
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "chip chip-gold",
-    style: {
-      fontSize: 11
-    }
-  }, "FIRST SESSION"), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontSize: 12,
-      color: 'hsl(var(--yk-ink) / .5)',
-      fontWeight: 600
-    }
-  }, "Step ", step, " of 4")), /*#__PURE__*/React.createElement("h2", {
-    className: "display",
-    style: {
-      margin: 0,
-      fontSize: 26,
-      fontWeight: 800,
-      letterSpacing: '-0.02em'
-    }
-  }, step === 1 && "Let's start with your teen", step === 2 && "Which sport and level?", step === 3 && "Pick a day", step === 4 && "How do we reach you?"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: 4,
-      background: 'hsl(var(--yk-off))',
-      borderRadius: 999,
-      marginTop: 16,
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: '100%',
-      width: `${step * 25}%`,
-      background: 'hsl(var(--yk-gold))',
-      transition: 'width .3s'
-    }
-  }))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: 32,
-      display: 'grid',
-      gap: 14
-    }
-  }, step === 1 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Teen's first name"), /*#__PURE__*/React.createElement("input", {
-    className: "input",
-    value: form.teenName,
-    onChange: e => setForm({
-      ...form,
-      teenName: e.target.value
-    }),
-    placeholder: "e.g. Ethan"
-  })), /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Teen's age"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: 6,
-      flexWrap: 'wrap'
-    }
-  }, ['13', '14', '15', '16', '17'].map(a => /*#__PURE__*/React.createElement("button", {
-    key: a,
-    type: "button",
-    className: "tweak-chip",
-    style: {
-      background: form.teenAge === a ? 'hsl(var(--yk-ink))' : 'white',
-      color: form.teenAge === a ? 'white' : 'hsl(var(--yk-ink))',
-      borderColor: form.teenAge === a ? 'hsl(var(--yk-ink))' : 'hsl(var(--yk-line))',
-      padding: '12px 20px',
-      fontSize: 15
-    },
-    onClick: () => setForm({
-      ...form,
-      teenAge: a
-    })
-  }, a))))), step === 2 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Main sport (or general fitness)"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: 8
-    }
-  }, ['Rugby League', 'AFL', 'Football', 'Netball', 'Basketball', 'General fitness'].map(s => /*#__PURE__*/React.createElement("button", {
-    key: s,
-    type: "button",
-    style: {
-      padding: '14px',
-      borderRadius: 10,
-      fontSize: 14,
-      fontWeight: 600,
-      cursor: 'pointer',
-      background: form.sport === s ? 'hsl(var(--yk-ink))' : 'white',
-      color: form.sport === s ? 'white' : 'hsl(var(--yk-ink))',
-      border: `1.5px solid ${form.sport === s ? 'hsl(var(--yk-ink))' : 'hsl(var(--yk-line))'}`,
-      textAlign: 'left'
-    },
-    onClick: () => setForm({
-      ...form,
-      sport: s
-    })
-  }, s)))), /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Gym experience"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: 8,
-      flexWrap: 'wrap'
-    }
-  }, ['None', 'Some', 'Experienced'].map(l => /*#__PURE__*/React.createElement("button", {
-    key: l,
-    type: "button",
-    className: "tweak-chip",
-    style: {
-      background: form.level === l ? 'hsl(var(--yk-ink))' : 'white',
-      color: form.level === l ? 'white' : 'hsl(var(--yk-ink))',
-      borderColor: form.level === l ? 'hsl(var(--yk-ink))' : 'hsl(var(--yk-line))',
-      padding: '12px 18px',
-      fontSize: 14
-    },
-    onClick: () => setForm({
-      ...form,
-      level: l
-    })
-  }, l))))), step === 3 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Preferred day"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: 8
-    }
-  }, ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => /*#__PURE__*/React.createElement("button", {
-    key: d,
-    type: "button",
-    style: {
-      padding: '14px',
-      borderRadius: 10,
-      fontSize: 14,
-      fontWeight: 700,
-      cursor: 'pointer',
-      background: form.day === d ? 'hsl(var(--yk-gold))' : 'white',
-      color: form.day === d ? 'hsl(26 83% 14%)' : 'hsl(var(--yk-ink))',
-      border: `1.5px solid ${form.day === d ? 'hsl(var(--yk-gold))' : 'hsl(var(--yk-line))'}`
-    },
-    onClick: () => setForm({
-      ...form,
-      day: d
-    })
-  }, d)))), /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Preferred time"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: 8
-    }
-  }, ['3:30 PM', '4:30 PM', '5:30 PM', '6:30 PM'].map(t => /*#__PURE__*/React.createElement("button", {
-    key: t,
-    type: "button",
-    style: {
-      padding: '14px',
-      borderRadius: 10,
-      fontSize: 14,
-      fontWeight: 600,
-      cursor: 'pointer',
-      background: form.time === t ? 'hsl(var(--yk-ink))' : 'white',
-      color: form.time === t ? 'white' : 'hsl(var(--yk-ink))',
-      border: `1.5px solid ${form.time === t ? 'hsl(var(--yk-ink))' : 'hsl(var(--yk-line))'}`
-    },
-    onClick: () => setForm({
-      ...form,
-      time: t
-    })
-  }, t))))), step === 4 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Parent's name"), /*#__PURE__*/React.createElement("input", {
-    className: "input",
-    value: form.parent,
-    onChange: e => setForm({
-      ...form,
-      parent: e.target.value
-    }),
-    placeholder: "Your name"
-  })), /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Email"), /*#__PURE__*/React.createElement("input", {
-    className: "input",
-    type: "email",
-    value: form.email,
-    onChange: e => setForm({
-      ...form,
-      email: e.target.value
-    }),
-    placeholder: "you@email.com"
-  })), /*#__PURE__*/React.createElement("label", {
-    className: "field"
-  }, /*#__PURE__*/React.createElement("span", null, "Phone"), /*#__PURE__*/React.createElement("input", {
-    className: "input",
-    value: form.phone,
-    onChange: e => setForm({
-      ...form,
-      phone: e.target.value
-    }),
-    placeholder: "0400 000 000"
-  }))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: 8,
-      marginTop: 12
-    }
-  }, step > 1 && /*#__PURE__*/React.createElement("button", {
-    onClick: back,
-    className: "btn btn-outline",
-    style: {
-      flex: '0 0 auto'
-    }
-  }, "Back"), step < 4 && /*#__PURE__*/React.createElement("button", {
-    onClick: next,
-    className: "btn btn-dark",
-    style: {
-      flex: 1,
-      justifyContent: 'center'
-    }
-  }, "Continue ", /*#__PURE__*/React.createElement(ArrowRight, {
-    size: 18,
-    className: "arrow"
-  })), step === 4 && /*#__PURE__*/React.createElement("button", {
-    onClick: next,
-    className: "btn btn-primary",
-    style: {
-      flex: 1,
-      justifyContent: 'center'
-    }
-  }, "Book Session ", /*#__PURE__*/React.createElement(Check, {
-    size: 18
-  })))), step === 5 && /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: 32,
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: 72,
-      height: 72,
-      margin: '0 auto 20px',
-      borderRadius: 999,
-      background: 'hsl(var(--yk-gold))',
-      color: 'hsl(26 83% 14%)',
-      display: 'grid',
-      placeItems: 'center'
-    }
-  }, /*#__PURE__*/React.createElement(Check, {
-    size: 36,
-    stroke: 2.5
-  })), /*#__PURE__*/React.createElement("h3", {
-    className: "display",
-    style: {
-      fontSize: 24,
-      margin: 0,
-      fontWeight: 800
-    }
-  }, "Booked."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      marginTop: 8,
-      color: 'hsl(var(--yk-ink) / .6)'
-    }
-  }, "Zac will confirm ", form.teenName || 'your teen', "'s session on ", form.day || 'their chosen day', " at ", form.time || 'their chosen time', ".")));
-}
 function ContactCoachModal({
   open,
   onClose
@@ -3696,21 +3439,17 @@ function ContactCoachModal({
       fontSize: 13,
       color: 'hsl(var(--yk-ink) / .55)'
     }
-  }, "Usually replies within a few hours")))), /*#__PURE__*/React.createElement("iframe", {
-    src: "https://api.leadconnectorhq.com/widget/form/ATwKxumBh8CdpThEnu9I",
+  }, "Usually replies within a few hours")))), /*#__PURE__*/React.createElement("div", {
     style: {
-      width: '100%',
-      border: 'none',
-      display: 'block',
-      minHeight: 560
-    },
-    id: "modal-ghl-form-YK",
+      padding: '0 20px 20px'
+    }
+  }, /*#__PURE__*/React.createElement(EnquiryForm, {
+    source: "young-knights-contact-popup",
     title: "Get in touch"
-  }));
+  })));
 }
 Object.assign(window, {
   Modal,
-  FreeTrialModal,
   ContactCoachModal
 });
 })();
